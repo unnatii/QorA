@@ -1,0 +1,27 @@
+<%- include("../partials/header") %>
+
+
+<div class="container">
+  <div  class="col-sm-9 col-md-9">
+  <h3>Edit your Answer</h3>
+  <form action="/home/<%=cardinfo._id%>/comments/<%=cominfo._id%>" method="POST">
+    <div class="form-group">
+      <label >Answer</label>
+      <textarea id="newAns" class="form-control" name="comtext" value="<%=cominfo.text %>"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+   </div>
+  
+   <div id="Rightsidediv" class="col-sm-3 col-md-3">
+    <form id="dictform" action="/home/word" method="POST">
+       <input type="text" name="word" placeholder=" word dicitonary" >
+       <button class="btn btn-primary" type="submit">find</button>
+     </form>
+  <ul> </ul>
+  </div>
+
+  </div>
+
+
+<%- include("../partials/footer") %>

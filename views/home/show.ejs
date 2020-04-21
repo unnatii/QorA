@@ -1,0 +1,59 @@
+<%- include("../partials/header") %>
+
+<div class="row" >
+
+<!--question  section-->
+  <div id="giveans" class="col-sm-1 col-md-1">
+    <a class="btn btn-primary" href="/home/<%= cardinfo._id %>/comments/new">Write<br> Answer</a></div>
+  <div id="quesdiv" class="col-sm-8 col-md-8">
+    <div class="thumbnail">
+      <h1><%= cardinfo.question %> </h1>
+      <img src="<%=cardinfo.image %>" >
+      <% if( currentUser && cardinfo.author.id.equals(currentUser._id)){ %>
+      <a href="/home/<%=cardinfo._id%>/edit" class="btn btn-warning" >Edit</a>
+      <form  action="/home/<%= cardinfo._id %>?_method=DELETE" method="post">
+        <button class="btn btn-danger" >Delete</button>
+        </form>
+        <% } %>
+        </div>
+
+     <!--comment section-->
+  
+   <% cardinfo.comment.forEach(function(com){ %>
+    <div id="allans">
+    <div id="eachans" >
+       <h3 "><%= com.author.username %></h3>
+       <span id="btndiv">
+      <% if( currentUser && com.author.id.equals(currentUser._id)){ %>
+      <a href="/home/<%=cardinfo._id%>/comments/<%= com._id %>/edit" class="btn btn-xs btn-warning" >
+        <i class='fas fa-edit' style='font-size:12px'></i></a>
+        <form action="/home/<%= cardinfo._id %>/comments/<%= com._id %>?_method=DELETE" method="post">
+        <button class="btn btn-xs btn-danger" ><i class='fas fa-trash' style='font-size:12px'></i></button>
+         </form>
+        <% } %>
+      </span> </div>
+    <p><%= com.text %></p>
+  </div>
+ <% }); %>
+  
+
+  </div>
+
+ <!--dictionary section-->
+  <div id="Rightsidediv" class="col-sm-3 col-md-3">
+       <form id="dictform" action="/home/word" method="POST">
+          <input type="text" name="word" placeholder=" word dicitonary" >
+          <button class="btn btn-primary" type="submit">find</button>
+        </form>
+    <ul> </ul>
+  </div>
+
+
+  </div>
+
+
+
+
+
+
+<%- include("../partials/footer") %>

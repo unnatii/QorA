@@ -1,0 +1,133 @@
+
+
+ #Homeheading h3 {
+     display: inline;
+ }
+
+ #Homeheading {
+     background-color: #F2F4F4;
+     padding:25px 25px 25px 30px;
+     margin-bottom: 20px;
+ }
+ #Homeheading .btn {
+    float:right;
+}
+
+#sidelist li{
+    list-style-type: none;
+    background-color:#F2F4F4;
+    padding: 15px 0 10px 25px;
+    margin-right:30px ;
+    
+}
+
+ #sidediv li:hover{
+  background-color: #AEB6BF;
+ }
+ /* #sidediv li .active{
+    background-color: #AEB6BF; 
+ } */
+#newQuesDiv{
+    width: 60%;
+    margin: 100px auto;
+    
+    
+}
+
+#category{
+    height: 35px;
+    width: 100%;
+}
+
+.thumbnail img{
+    
+        max-width: 100%;
+        max-height: 100%;
+        margin-bottom: 20px;
+}
+
+#Rightsidediv input{
+    margin: 20px 0 20px 20px;
+    width: 220px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#Rightsidediv button{
+    margin: 0 0 30px 100px;
+}
+
+#Rightsidediv ul{
+    list-style-type: none;
+}
+
+#Rightsidediv li{
+    margin: 0 0 5px 0;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F2F4F4;
+}
+
+#quesdiv h1{
+ margin: 0 0 10px 20px;
+}
+
+.btn-warning{
+    margin: 0 0 0 20px;
+    width: 70px;
+}
+
+#quesdiv form{
+    display: inline;
+}
+
+#quesdiv .thumbnail img{
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+#giveans{
+width: 70px;
+
+    padding: 0;
+    margin: 30px 0 0 35px;
+}
+
+#giveans a{
+width: 60px;
+margin: 50px 0 0 1px;
+height: 55px;
+padding: 5px;
+}
+
+#newAns{
+    height:400px ;
+}
+
+#allans  {
+  background-color:#EBEDEF;
+  margin: 20px 0 0 0;
+  height: auto;
+  padding: 10px;
+}
+
+#eachans{
+    background-color:#D6DBDF;
+    padding: 5px;
+}
+#allans p{
+    padding: 10px 0 0 0;
+}
+
+#eachans h3{
+    display: inline;
+    
+}
+
+#eachans span{
+    float:right;
+}
+#eachans  a{
+    width: 20px;
+}

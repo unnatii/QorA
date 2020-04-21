@@ -1,0 +1,30 @@
+<%- include("../partials/header") %>
+
+
+<div class="container"  style="width: 30%; margin: 100px auto;">
+    <h3>Edit</h3>
+<form action="/home/<%= cardinfo._id %>?_method=PUT" method="post">
+  <div class="form-group">
+    <textarea class="form-control" name="question" placeholder="Write question" ><%=cardinfo.question %></textarea>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" name="image" placeholder="image url" value="<%=cardinfo.image %>">
+  </div>
+   <div class="form-group">
+    <select id="category" name="category" >
+      <option value="Entertainment">Entertainment</option>
+      <option value="Journalism">Journalism</option>
+      <option value="Writing">Writing</option>
+      <option value="Psychology">Psychology</option>
+      <option value="Finance">Finance</option>
+      <option value="Economics">Economics</option>
+      <option value="Novel">Novel</option>
+      <option value="Fine arts">Fine arts</option>
+      <option value="Fiction">Fiction</option>
+    </select>
+  </div>
+ 
+  <button type="submit" class="btn btn-primary btn-block">Submit</button>
+</form>
+</div>
+<%- include("../partials/footer") %>

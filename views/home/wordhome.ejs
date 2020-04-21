@@ -1,0 +1,63 @@
+<%- include("../partials/header") %>
+
+
+<div class="container">
+<div id="Homeheading">
+<h3 >What is your question ? </h3>
+<a href="/home/new" class="btn btn-primary">Ask Question</a>
+</div>
+
+
+
+<div class="row" >
+  <div id="sidediv" class="col-sm-3 col-md-3">
+    <ul id="sidelist">
+      <li >All</li>
+      <li>journalism</li>
+      <li>writing</li>
+      <li>psychology</li>
+      <li>finance</li>
+      <li>economics</li>
+      <li>novel</li>
+      <li>fine arts</li>
+      <li>fiction</li>
+    </ul>
+  </div>
+
+
+  <div class="col-sm-6 col-md-6">
+<% list.forEach(function(item){ %>
+ 
+    <div class="thumbnail">
+      
+      <div class="caption">
+        <h3><%= item.question %> </h3>
+        <img src="<%=item.image %>" >
+        <p><a href="/home/<%= item._id %>" class="btn btn-primary" role="button">Answers</a> </p>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+  
+  <div  class="col-sm-3 col-md-3">
+   
+     <div id="Rightsidediv">
+        <form id="dictform" action="/home/word" method="POST">
+            <input type="text" name="word" placeholder=" word dicitonary" >
+            <button class="btn btn-primary" type="submit">find</button>
+          </form>
+      <ul>
+      <%  for(var i=0;i<worddef.results.length;i++){
+				 	for(var j=0;j<worddef.results[i].lexicalEntries[0].entries[0].senses.length;j++){ %>
+        
+          <li><%=worddef.results[i].lexicalEntries[0].entries[0].senses[j].definitions[0];%></li>
+          <% }} %>
+        </ul>
+     </div>
+    </div>
+
+
+</div>
+
+
+<%- include("../partials/footer") %>
